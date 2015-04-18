@@ -1,4 +1,3 @@
-
 Ext.define('SpellChecker.controller.SpellCheckerController', {
     extend: 'Ext.app.Controller',
     requires: [],
@@ -16,9 +15,12 @@ Ext.define('SpellChecker.controller.SpellCheckerController', {
         }
     },
     analyzeText: function (textArea) {
-        Ext.Viewport.setMasked({xtype:'loadmask',message:'Correcting'});
+        Ext.Viewport.setMasked({xtype: 'loadmask', message: 'Correcting'});
+        var value = textArea.getValue();
+        value = value.replace(/s/g, 'ş');
         var task = Ext.create('Ext.util.DelayedTask', function () {
-           Ext.Viewport.setMasked(false);
+            textArea.setValue(value);
+            Ext.Viewport.setMasked(false);
         });
         task.delay(2000);
     }
