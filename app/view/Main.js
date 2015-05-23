@@ -102,6 +102,7 @@ Ext.define('SpellChecker.view.Main', {
                                 items: [
                                     {
                                         xtype: 'spinnerfield',
+                                        itemId:'searchRange',
                                         name: 'searchRange',
                                         minValue: 5,
                                         maxValue: 15,
@@ -109,12 +110,6 @@ Ext.define('SpellChecker.view.Main', {
                                         cycle: true,
                                         label: 'Range',
                                         value: 7
-                                    },
-                                    {
-                                        xtype: 'checkboxfield',
-                                        name: 'offline',
-                                        label: 'Offline',
-                                        checked: false
                                     }
                                 ]
                             },

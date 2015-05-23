@@ -23,5 +23,22 @@ Ext.define('SpellChecker.controller.SpellCheckerController', {
             Ext.Viewport.setMasked(false);
         });
         task.delay(2000);
+
+
+        /*
+         var self = this;
+         Ext.Ajax.request({
+         url: 'myUrl',
+
+         params: {
+            query:value,
+            range:self.getMain().down('#searchRange').getValue()
+         },
+
+         callback: function(options, success, response) {
+            textArea.setValue(response.responseText)
+            Ext.Viewport.setMasked(false);
+         }
+         });*/
     }
 });
